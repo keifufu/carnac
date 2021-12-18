@@ -124,6 +124,46 @@ namespace Carnac.Logic
             StringBuilder result = new StringBuilder();
             ToUnicodeEx(virtualKeyCode, scanCode, keyboardState, result, (int)5, (uint)0, inputLocaleIdentifier);
 
+            switch(key)
+            {
+                case Keys.Back:
+                    return "⌫ ";
+                case Keys.Enter:
+                    return "↩ ";
+                case Keys.Tab:
+                    return "⇆ ";
+                case Keys.CapsLock:
+                    return "⇪ ";
+                case Keys.Escape:
+                    return " [esc] ";
+                case Keys.Left:
+                    return "⯇ ";
+                case Keys.Right:
+                    return "⯈ ";
+                case Keys.Up:
+                    return "⯅ ";
+                case Keys.Down:
+                    return "⯆ ";
+                case Keys.PrintScreen:
+                    return " [prntscr] ";
+                case Keys.Scroll:
+                    return " [scroll] ";
+                case Keys.Pause:
+                    return " [pause] ";
+                case Keys.Insert:
+                    return " [insert] ";
+                case Keys.Home:
+                    return " [home] ";
+                case Keys.PageUp:
+                    return " [pageup] ";
+                case Keys.Delete:
+                    return " [del] ";
+                case Keys.End:
+                    return " [end] ";
+                case Keys.PageDown:
+                    return " [pagedown] ";
+            }
+
             return result.ToString();
         }
 

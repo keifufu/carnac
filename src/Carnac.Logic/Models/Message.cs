@@ -139,7 +139,15 @@ namespace Carnac.Logic.Models
                       var last = acc.Last();
                       if (last.IsRepeatedBy(curr))
                       {
-                          last.IncrementRepeat();
+                          if (last._hasBeenIncremented)
+                          {
+                              last.IncrementRepeat();
+                          }
+                          else
+                          {
+                              acc.RemoveAt(acc.Count - 1);
+                              acc.Add(new RepeatedKeyPress(curr, last.NextRequiresSeperator, true));
+                          }
                       }
                       else
                       {
@@ -165,14 +173,26 @@ namespace Carnac.Logic.Models
             readonly bool requiresPrefix;
             readonly bool nextRequiresSeperator;
             readonly string[] textParts;
+            readonly string[] compTextParts;
             int repeatCount;
+            public bool _hasBeenIncremented;
 
-            public RepeatedKeyPress(KeyPress keyPress, bool requiresPrefix = false)
+            public RepeatedKeyPress(KeyPress keyPress, bool requiresPrefix = false, bool _hasBeenIncremented = false)
             {
                 nextRequiresSeperator = keyPress.HasModifierPressed;
+
                 textParts = keyPress.GetTextParts().ToArray();
+                compTextParts = textParts;
+                if (_hasBeenIncremented)
+                {
+                    var tempList = textParts.ToList();
+                    tempList.Add(textParts[0]);
+                    textParts = tempList.ToArray();
+                }
+
                 this.requiresPrefix = requiresPrefix;
                 repeatCount = 1;
+                this._hasBeenIncremented = _hasBeenIncremented;
             }
 
             public bool NextRequiresSeperator { get { return nextRequiresSeperator; } }
@@ -184,7 +204,7 @@ namespace Carnac.Logic.Models
 
             public bool IsRepeatedBy(KeyPress nextKeyPress)
             {
-                return textParts.SequenceEqual(nextKeyPress.GetTextParts());
+                return compTextParts.SequenceEqual(nextKeyPress.GetTextParts());
             }
 
             public IEnumerable<string> GetTextParts()

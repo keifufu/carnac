@@ -37,7 +37,8 @@ namespace Carnac.Logic.Models
             {
                 if (!isFirst)
                 {
-                    yield return " + ";
+                    yield return "";
+                    // yield return " + ";
                 }
                 else
                 {

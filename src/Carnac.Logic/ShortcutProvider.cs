@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -20,6 +20,9 @@ namespace Carnac.Logic
                 shortcuts = new List<ShortcutCollection>();
                 return;
             }
+            shortcuts = new List<ShortcutCollection>();
+            return;
+
             string[] files = Directory.GetFiles(folder, filter);
 
             shortcuts = GetYamlMappings(files).Select(GetShortcuts).ToList();
@@ -48,10 +51,10 @@ namespace Carnac.Logic
                 return
                     new KeyPressDefinition
                         (keys.Value,
-                         shiftPressed: combo.Contains("shift"),
-                         controlPressed: combo.Contains("ctrl"),
-                         altPressed: combo.Contains("alt"),
-                         winkeyPressed: combo.Contains("win"));
+                         shiftPressed: combo.Contains("⇧"),
+                         controlPressed: combo.Contains("^"),
+                         altPressed: combo.Contains("⎇ "),
+                         winkeyPressed: combo.Contains("[win]"));
             return null;
         }
 
