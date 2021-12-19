@@ -164,21 +164,67 @@
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
 
-                                    <DataTrigger Value="Back" Binding="{Binding .}">
+                                    <DataTrigger Value="PageUp" Binding="{Binding .}">
                                         <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
 
-                                    <DataTrigger Value="Escape" Binding="{Binding .}">
+                                    <DataTrigger Value="Home" Binding="{Binding .}">
                                         <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
 
-                                    <DataTrigger Value="Alt" Binding="{Binding .}">
+                                    <DataTrigger Value="Delete" Binding="{Binding .}">
                                         <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
-                                    <DataTrigger Value="Ctrl" Binding="{Binding .}">
+
+                                    <DataTrigger Value="End" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="Win" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="PageDown" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="Insert" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="Pause" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="ScrollLock" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="Esc" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="PrntScr" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value=" ⇆ " Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="Caps" Binding="{Binding .}">
                                         <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
@@ -188,7 +234,17 @@
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
 
-                                    <DataTrigger Value="Win" Binding="{Binding .}">
+                                    <DataTrigger Value="Alt" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="Ctrl" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
+                                    <DataTrigger Value="WinOld" Binding="{Binding .}">
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                         <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
                                         <Setter TargetName="KeyCap" Property="Control.Visibility" Value="Collapsed" />

@@ -131,11 +131,11 @@ namespace Carnac.Logic
                 case Keys.Enter:
                     return "↩ ";
                 case Keys.Tab:
-                    return "⇆ ";
+                    return " ⇆ ";
                 case Keys.CapsLock:
-                    return "⇪ ";
+                    return "Caps";
                 case Keys.Escape:
-                    return " [esc] ";
+                    return "Esc";
                 case Keys.Left:
                     return "⯇ ";
                 case Keys.Right:
@@ -145,23 +145,23 @@ namespace Carnac.Logic
                 case Keys.Down:
                     return "⯆ ";
                 case Keys.PrintScreen:
-                    return " [prntscr] ";
+                    return "PrntScr";
                 case Keys.Scroll:
-                    return " [scroll] ";
+                    return "ScrollLock";
                 case Keys.Pause:
-                    return " [pause] ";
+                    return "Pause";
                 case Keys.Insert:
-                    return " [insert] ";
+                    return "Insert";
                 case Keys.Home:
-                    return " [home] ";
+                    return "Home";
                 case Keys.PageUp:
-                    return " [pageup] ";
+                    return "PageUp";
                 case Keys.Delete:
-                    return " [del] ";
+                    return "Delete";
                 case Keys.End:
-                    return " [end] ";
+                    return "End";
                 case Keys.PageDown:
-                    return " [pagedown] ";
+                    return "PageDown";
             }
 
             return result.ToString();

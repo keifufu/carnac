@@ -51,10 +51,10 @@ namespace Carnac.Logic
                 return
                     new KeyPressDefinition
                         (keys.Value,
-                         shiftPressed: combo.Contains("⇧"),
-                         controlPressed: combo.Contains("^"),
-                         altPressed: combo.Contains("⎇ "),
-                         winkeyPressed: combo.Contains("[win]"));
+                         shiftPressed: combo.Contains("Shift"),
+                         controlPressed: combo.Contains("Ctrl"),
+                         altPressed: combo.Contains("Alt"),
+                         winkeyPressed: combo.Contains("Win"));
             return null;
         }
 

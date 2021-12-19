@@ -144,17 +144,17 @@ namespace Carnac.Logic
             var altPressed = interceptKeyEventArgs.AltPressed;
             var shiftPressed = interceptKeyEventArgs.ShiftPressed;
             if (controlPressed)
-                yield return "^";
+                yield return "Ctrl";
             if (altPressed)
-                yield return "⎇ ";
+                yield return "Alt";
             if (isWinKeyPressed)
-                yield return "[win]";
+                yield return "Win";
 
             if (controlPressed || altPressed)
             {
                 //Treat as a shortcut, don't be too smart
                 if (shiftPressed)
-                    yield return "⇧";
+                    yield return "Shift";
 
                 yield return interceptKeyEventArgs.Key.SanitiseLower();
             }
