@@ -129,6 +129,7 @@ namespace Carnac.Logic.Models
             return CreateTextSequence(new[] {key});
         }
 
+        static private List<string> allowedX2Characters = new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         static IEnumerable<string> CreateTextSequence(IEnumerable<KeyPress> keys)
         {
             return keys.Aggregate(new List<RepeatedKeyPress>(),
@@ -139,7 +140,8 @@ namespace Carnac.Logic.Models
                       var last = acc.Last();
                       if (last.IsRepeatedBy(curr))
                       {
-                          if (last._hasBeenIncremented)
+                          bool isAllowed = allowedX2Characters.Contains(curr.GetTextParts().First().ToLower()) || allowedX2Characters.Contains(curr.GetTextParts().Last().ToLower());
+                          if (last._hasBeenIncremented || !isAllowed)
                           {
                               last.IncrementRepeat();
                           }
