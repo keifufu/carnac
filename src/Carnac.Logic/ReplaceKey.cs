@@ -189,6 +189,8 @@ namespace Carnac.Logic
                 case Keys.VolumeDown:
                 case Keys.VolumeUp:
                     return "Volume";
+                case Keys.NumLock:
+                    return "NumLock";
             }
 
             return result.ToString();

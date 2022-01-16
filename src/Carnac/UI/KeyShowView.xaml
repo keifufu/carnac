@@ -314,6 +314,11 @@
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                     </DataTrigger>
 
+                                    <DataTrigger Value="NumLock" Binding="{Binding .}">
+                                        <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
+                                        <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+
                                     <DataTrigger Value="WinOld" Binding="{Binding .}">
                                         <Setter TargetName="regular" Property="Control.Visibility" Value="Collapsed" />
                                         <Setter TargetName="KeyCapBorder" Property="Control.Visibility" Value="Visible" />
